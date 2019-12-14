@@ -37,14 +37,23 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kolcsonzo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tricikli = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.datum,
+            this.kolcsonzo,
+            this.tricikli});
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(392, 360);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
@@ -102,7 +111,22 @@
             this.label2.Text = "###kép###";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Form1
+            // datum
+            // 
+            this.datum.HeaderText = "Dátum";
+            this.datum.Name = "datum";
+            // 
+            // kolcsonzo
+            // 
+            this.kolcsonzo.HeaderText = "Kölcsönző";
+            this.kolcsonzo.Name = "kolcsonzo";
+            // 
+            // tricikli
+            // 
+            this.tricikli.HeaderText = "Tricikli";
+            this.tricikli.Name = "tricikli";
+            // 
+            // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -112,7 +136,7 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.lb_text1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form1";
+            this.Name = "FrmMain";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -129,6 +153,9 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kolcsonzo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tricikli;
     }
 }
 
