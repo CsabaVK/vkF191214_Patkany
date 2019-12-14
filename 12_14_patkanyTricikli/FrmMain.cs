@@ -24,11 +24,11 @@ namespace _12_14_patkanyTricikli
         private void FillDataGrid()
         {
             conn.Open();
-            var cmd = new SqlCommand("SELECT * FROM boltok;", conn);
+            var cmd = new SqlCommand("SELECT * FROM patkany;", conn);
             var r = cmd.ExecuteReader();
             while (r.Read())
             {
-                dataGridView1.Rows.Add(r[0], r[1], r[2]);
+                dataGridView1.Rows.Add(r[1]);
             }
             conn.Close();
         }
